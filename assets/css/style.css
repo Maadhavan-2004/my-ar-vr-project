@@ -1,0 +1,375 @@
+/* Navbar Styles
+____________________________________*/
+nav {
+    background-color: #2a0a3a; /* Dark purple */
+}
+
+nav ul {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 110px;
+}
+
+nav ul a {
+    color: #9cff9c; /* Light green */
+    font-size: 16px;
+    font-weight: 600;
+    font-family: 'Roboto', sans-serif;
+}
+
+a.brand-logo {
+    font-family: 'Modern Antiqua', cursive;
+    color: #b3ffb3; /* Brighter green */
+    font-size: 2.7rem;
+    font-weight: 900;
+    text-shadow: 0 0 5px rgba(156, 255, 156, 0.5); /* Glow effect */
+}
+
+@-webkit-keyframes hvr-ripple-out {
+    100% {
+      top: -12px;
+      right: -12px;
+      bottom: -12px;
+      left: -12px;
+      opacity: 0;
+    }
+}
+
+@keyframes hvr-ripple-out {
+    100% {
+      top: -12px;
+      right: -12px;
+      bottom: -12px;
+      left: -12px;
+      opacity: 0;
+    }
+}
+
+.hvr-grow {
+    transform: scale(1.05);
+}
+
+.hvr-grow:hover, .hvr-grow:focus, .hvr-grow:active {
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+    text-shadow: 0 0 8px rgba(156, 255, 156, 0.7); /* Green glow */
+}
+
+.nav-wrapper {
+    margin: 0 auto;
+    max-width: 960px;
+}
+
+/* Button enhancements */
+.waves-effect.waves-light.btn-small {
+    border-radius: 20px;
+    font-weight: 600;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+    margin: 0 5px;
+}
+
+.waves-effect.waves-light.btn-small:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
+#easyBtn {
+    background-color: #4caf50 !important; /* Green */
+}
+
+#mediumBtn {
+    background-color: #7e57c2 !important; /* Purple */
+}
+
+#hardBtn {
+    background-color: #ab47bc !important; /* Lighter purple */
+}
+
+/* Difficulty buttons container */
+.difficulty-buttons {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    background-color: rgba(42, 10, 58, 0.8); /* Semi-transparent dark purple */
+    border-radius: 30px;
+    margin: 0 auto;
+    max-width: 400px;
+}
+
+/* Sidenav Styles
+____________________________________*/
+.sidenav {
+    width: 220px;
+    background-color: #f3e5f5; /* Very light purple */
+}
+
+.sidenav-even {
+    border-top: 1px solid lightgrey;
+    border-bottom: 1px solid lightgrey;
+}
+
+/* Traditional Tic Tac Toe Styles
+____________________________________*/
+h1 {
+    margin: 0;
+}
+
+p {
+    text-align: center;
+}
+
+.background {
+    background: linear-gradient(rgba(123, 31, 162, 0.1), rgba(123, 31, 162, 0.1)), 
+                url(https://www.toptal.com/designers/subtlepatterns/patterns/whirlpool.png);
+    background-size: cover;
+    background-position-x: initial;
+    background-position-y: initial;
+    background-size: initial;
+    background-repeat: repeat;
+    background-attachment: initial;
+    background-origin: initial;
+    background-clip: initial;
+    background-color: initial;
+    min-height: 100%;
+}
+
+.special-col {
+    text-align: center;
+}
+
+.special-text {
+    font-family: 'Roboto', sans-serif;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+.tic-tac-toe {
+    padding-top: 21px;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.row {
+    margin-bottom: 0;
+    padding-left: 5%;
+}
+
+.row .col.s4 {
+    width: 30%;
+    margin-left: auto;
+    left: auto;
+    right: auto;
+}
+
+.t-switch label {
+    font-family: 'Roboto', sans-serif;
+    color: #b388ff !important; /* Light purple */
+    font-size: medium;
+}
+
+.size {
+    background-color: #f3e5f5; /* Very light purple */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 5px solid #e1bee7; /* Light purple border */
+    margin-right: 10px;
+    margin-bottom: 10px;
+    z-index: 1; /* Ensure no interference with AR elements */
+    transition: all 0.3s ease;
+}
+
+.size:hover {
+    background-color: #e1bee7; /* Light purple */
+    transform: scale(1.02);
+}
+
+.size:after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+}
+
+.switch label {
+    color: #b388ff !important; /* Light purple */
+}
+
+.switch label .lever {
+    background-color: #7e57c2; /* Purple */
+}
+
+.switch label .lever:after {
+    background-color: #4caf50; /* Green */
+}
+
+.stick-bottom .restart-index {
+    bottom: 0;
+    position: absolute;
+    background-color: #2a0a3a !important;
+    color: #9cff9c !important;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.stick-bottom .instructions-index {
+    background-color: #2a0a3a !important;
+    color: #9cff9c !important;
+}
+
+/* AR Tic Tac Toe Styles
+____________________________________*/
+#arjsDebugUIContainer, .a-enter-vr-button {
+    display: none;
+}
+
+.stick-top #twoPlayerSwitch {
+    right: 0;
+    position: absolute;
+}
+
+.stick-bottom #restartBtn {
+    right: 0;
+    bottom: 2px;
+    position: absolute;
+    background-color: #4caf50 !important; /* Green */
+    color: #fff !important;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.stick-bottom .instructions {
+    left: 35px;
+    bottom: 0;
+    position: absolute;
+    padding: 10px 10px 10px 10px;
+    background-color: #7e57c2; /* Purple */
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.ar-switch label {
+    font-family: 'Roboto', sans-serif;
+    color: #0e100e;
+    font-size: medium;
+}
+
+.stick-top {
+    background-color: #7e57c2; /* Purple */
+    width: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+
+.stick-bottom {
+    width: 100%;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+}
+
+.ar-brand-logo {
+    z-index: 999; /* Lower z-index to avoid covering AR elements */
+}
+
+.ar-nav {
+    position: fixed; 
+    top: 0; 
+    width: 100%; 
+    text-align: center; 
+    z-index: 1;
+}
+
+/* AR marker planes */
+.a-plane {
+    transition: all 0.3s ease;
+}
+
+.a-plane:hover {
+    background-color: rgba(156, 255, 156, 0.3) !important; /* Light green tint */
+}
+
+/* Marker Styles
+____________________________________*/
+.marker {
+    max-width: 75%;
+    padding-top: 90px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+}
+
+/* Media Queries
+____________________________________*/
+@media only screen and (min-width: 601px) {
+    nav a.sidenav-trigger {
+        display: none;
+    }
+
+    .container {
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    .tic-tac-toe {
+        width: 93%;
+    }
+    .row {
+        padding-left: 3%;
+    }
+    .size {
+        margin-right: 6px;
+    }
+    .t-switch label {
+        font-size: small;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    nav .brand-logo {
+        left: 60px !important;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    nav .brand-logo {
+        left: 0; 
+        -webkit-transform: translateX(0); 
+        transform: translateX(0);  
+    }
+}
+
+@media only screen and (max-width: 708px) {
+    nav a.sidenav-trigger {
+        display: block;
+        margin-left: 0 !important;
+        margin-right: 18px;
+        top: 2px;
+    }
+    .hide-on-small-and-down {
+        display: none !important;
+    }
+    nav .brand-logo {
+        left: 40px !important;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .stick-bottom #restartBtn {
+        left: 35px;
+        bottom: 0px;
+        right: unset;
+    }
+    
+    .stick-bottom .instructions {
+        left: 35px;
+        bottom: 45px;
+    }
+}
