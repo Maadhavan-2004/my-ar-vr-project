@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Modern+Antiqua|Roboto" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/reset.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css"/>
+    <title>xoAR</title>
+</head>
+<body class="background">
+    <nav>
+        <div class="nav-wrapper container">
+            <a href="index.html" class="brand-logo">xoAR</a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            <ul class="left hide-on-small-and-down">
+                <li><a class="hvr-grow" href="marker.html">AR Marker</a></li>
+                <li><a class="hvr-grow" href="ar.html">AR Tic Tac Toe</a></li>
+            </ul>
+            <ul class="right">
+                <li>
+                    <div id="twoPlayerSwitch" class="switch t-switch"><label>1P<input type="checkbox"><span class="lever"></span>2P</label></div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <ul class="sidenav" id="mobile-demo">
+        <li><a href="marker.html">AR Marker</a></li>
+        <li><a class="sidenav-even" href="ar.html">AR Tic Tac Toe</a></li>
+    </ul>
+
+    <div class="tic-tac-toe container">
+        <div class="row">
+            <div id="0" class="col s4 size position"></div>
+            <div id="1" class="col s4 size position"></div>
+            <div id="2" class="col s4 size position"></div>
+        </div>
+        <div class="row">
+            <div id="3" class="col s4 size position"></div>
+            <div id="4" class="col s4 size position special-col"><p class="special-text">Make your move!</p></div>
+            <div id="5" class="col s4 size position"></div>
+        </div>
+        <div class="row">
+            <div id="6" class="col s4 size position"></div>
+            <div id="7" class="col s4 size position"></div>
+            <div id="8" class="col s4 size position"></div>
+        </div>
+    </div>
+
+    <div class="stick-bottom">
+        <div class="instructions instructions-index">Instructions</div>
+        <a id="restartBtn" class="waves-effect waves-light btn-small hvr-grow restart-index"><i class="material-icons left">replay</i>Restart</a>
+        
+        <!-- Difficulty Selection Buttons -->
+        <div class="difficulty-buttons">
+            <button id="easyBtn" class="waves-effect waves-light btn-small green">Easy</button>
+            <button id="mediumBtn" class="waves-effect waves-light btn-small blue">Medium</button>
+            <button id="hardBtn" class="waves-effect waves-light btn-small red">Hard</button>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+    <script src="assets/javascript/game.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.sidenav').sidenav();
+        });
+
+        // Set difficulty when a button is clicked
+        document.getElementById("easyBtn").addEventListener("click", function() { setDifficulty('easy'); });
+        document.getElementById("mediumBtn").addEventListener("click", function() { setDifficulty('medium'); });
+        document.getElementById("hardBtn").addEventListener("click", function() { setDifficulty('hard'); });
+    </script>
+</body>
+</html>

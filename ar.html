@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Modern+Antiqua|Roboto" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" media="screen" href="assets/css/reset.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+        <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css"/>
+
+        <script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>   
+        <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.0/aframe/build/aframe-ar.js"></script>
+        <script src="https://unpkg.com/aframe-text-geometry-component@^0.5.0/dist/aframe-text-geometry-component.min.js"></script> 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+        <script src="assets/javascript/ar-aframe.js"></script>
+        <script src="assets/javascript/ar.js"></script>
+
+        <title>Tic Tac Toe | AR</title>
+  </head>
+  <body>
+        <a-assets>
+            <a-asset-item id="optimerBoldFont" src="https://rawgit.com/mrdoob/three.js/dev/examples/fonts/optimer_bold.typeface.json"></a-asset-item>
+        </a-assets>
+        <a-scene cursor="rayOrigin:mouse">
+            <a-marker class="hiro" preset="hiro">
+                <a-plane id="0" color="#CCC" height="1.5" width="1.5" position="-2 0 -1" rotation="-90 0 0" material="opacity: 0.5" marker></a-plane>
+                <a-plane id="1" color="#CCC" height="1.5" width="1.5" position="-2 0 -3" rotation="-90 0 0" material="opacity: 0.5" marker></a-plane>
+                <a-plane id="2" color="#CCC" height="1.5" width="1.5" position="-2 0 -5" rotation="-90 0 0" material="opacity: 0.5" marker></a-plane>
+                <a-plane id="3" color="#CCC" height="1.5" width="1.5" position="0 0 -1" rotation="-90 0 0" material="opacity: 0.5" marker></a-plane>
+                <a-plane id="4" color="#CCC" height="1.5" width="1.5" position="0 0 -3" rotation="-90 0 0" material="opacity: 0.5" marker></a-plane>
+                <a-plane id="5" color="#CCC" height="1.5" width="1.5" position="0 0 -5" rotation="-90 0 0" material="opacity: 0.5" marker></a-plane>
+                <a-plane id="6" color="#CCC" height="1.5" width="1.5" position="2 0 -1" rotation="-90 0 0" material="opacity: 0.5" marker></a-plane>
+                <a-plane id="7" color="#CCC" height="1.5" width="1.5" position="2 0 -3" rotation="-90 0 0" material="opacity: 0.5" marker></a-plane>
+                <a-plane id="8" color="#CCC" height="1.5" width="1.5" position="2 0 -5" rotation="-90 0 0" material="opacity: 0.5" marker></a-plane>
+            </a-marker>
+        <a-entity camera></a-entity>
+        </a-scene>
+        <nav class="stick-top" aframe-injected>
+            <div class="nav-wrapper container">
+                <a href="index.html" class="ar-brand-logo" aframe-injected>xoAR</a>
+                <ul class="right">
+                    <li>
+                        <div id = "twoPlayerSwitch" class="switch ar-switch"><label>1P<input type="checkbox"><span class="lever"></span>2P</label></div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="stick-bottom">
+            <div class="instructions">Instructions</div>
+            <a id="restartBtn" class="waves-effect waves-light btn-small hvr-grow"><i class="material-icons left">replay</i>Restart</a>
+            <div class="difficulty-buttons">
+                <a id="easyBtn" class="waves-effect waves-light btn-small green">Easy</a>
+                <a id="mediumBtn" class="waves-effect waves-light btn-small yellow darken-2">Medium</a>
+                <a id="hardBtn" class="waves-effect waves-light btn-small red">Hard</a>
+            </div>
+        </div>
+
+        <script>
+            document.getElementById("easyBtn").addEventListener("click", function() {
+                alert("Easy mode selected!");
+            });
+            document.getElementById("mediumBtn").addEventListener("click", function() {
+                alert("Medium mode selected!");
+            });
+            document.getElementById("hardBtn").addEventListener("click", function() {
+                alert("Hard mode selected!");
+            });
+        </script>
+  </body>
+</html>
